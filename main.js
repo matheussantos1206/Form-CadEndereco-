@@ -19,7 +19,7 @@ const cepValido =(cep) => cep.length == 8 && eNumero(cep)// indentifica o tanto 
 
 //função preenchrer formulário
 
-const preencherformulario = (endereco) =>{ // Função que preenche os capos abaixo de acordo com os daos da API
+const preencherformulario = (endereco) =>{ // Função que preenche os campos abaixo de acordo com os dados da API
     document.getElementById('logradoro').value = endereco.logradoro;
     document.getElementById('localidade').value = endereco.localidade;
     document.getElementById('bairro').value = endereco.bairro;
