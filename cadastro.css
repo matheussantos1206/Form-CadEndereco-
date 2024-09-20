@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
  
 body {
@@ -14,17 +14,19 @@ body {
 }
  
 .container {
+    display: flex;
     background-color: white;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 80%;
 }
  
-h1 {
+/* h1 {
     text-align: center;
     margin-bottom: 20px;
-}
+    margin-top: 20px;
+} */
  
  
 label {
@@ -48,11 +50,28 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    position: absolute;
     left: 650px;
     top: 408px;
 }
  
 button:hover {
     background-color: #218838;
+}
+
+.form-input{
+    max-width: 30%;
+}
+
+.secao-input-2{
+    width: 100%;
+    border: solid 1px black;
+}
+.linha{
+    /* display: inline; */
+    max-width: 200%;
+    border: solid 1px black;
+}
+.input{
+    width: 400px;
+    border: solid 1px black;
 }
