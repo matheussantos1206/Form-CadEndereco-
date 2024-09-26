@@ -1,64 +1,50 @@
-<!DOCTYPE html>
-<html>
 
+</html><!DOCTYPE html>
+<html>
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='cadastro.css'>
-    <script src='main.js'></script>
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="pt-BR">
+    <div class="container">
+        <form action="#" method="POST">
+            <h1>Cadastro de Endereço</h1>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulário de Endereço</title>
-        <link rel="stylesheet" href="index.css">
-    </head>
-
-    <body>
-        <div class="container">
-            <form action="#" method="POST">
-                <h1>Cadastro de Endereço</h1>
-
-                <section class="form-input">
-                    <label for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" required>
+            <section class="form-input">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" required>
+            </section>
+            <div class="linha">
+                <section class="secao-input-2">
+                    <br><label for="rua">RUA</label>
+                    <input type="text" id="logradouro" name="rua" class="input" placeholder="Digite sua Rua" required>
                 </section>
-                <div class="linha">
-                    <section class="secao-input-2">
-                        <br><label for="rua">RUA</label>
-                        <input type="text" id="logradora" name="rua" class="input" placeholder="Digite sua Rua" required>
-                    </section>
-                    <section class="secao-input-2">
-                        <br><label for="numero">Nº:</label>
-                        <input type="text" id="numero" name="numero" placeholder="Número" required>
-                    </section>
-                    <section class="secao-input-2">
-                        <br><label for="bairro">Bairro:</label>
-                        <input type="text" id="bairro" name="bairro" placeholder="Digite seu Bairro" required>
-                    </section>
-                </div>
-                <br><label for="complemento">Complemento:</label>
-                <input type="text" id="complemento" name="complemento" placeholder="Complemento">
+                <section class="secao-input-2">
+                    <br><label for="numero">Nº:</label>
+                    <input type="text" id="numero" name="numero" placeholder="Número" required>
+                </section>
+                <section class="secao-input-2">
+                    <br><label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" placeholder="Digite seu Bairro" required>
+                </section>
+            </div>
+            <br><label for="complemento">Complemento:</label>
+            <input type="text" id="complemento" name="complemento" placeholder="Complemento">
 
-                <br><label for="cidade">Cidade:</label>
-                <input type="text" id="localidade" name="cidade" placeholder="Digite sua Cidade" required>
+            <br><label for="cidade">Cidade:</label>
+            <input type="text" id="localidade" name="cidade" placeholder="Digite sua Cidade" required>
 
-                <br><label for="estado">Estado:</label>
-                <input type="text" id="uf" name="estado" placeholder="Digite seu Estado" required>
+            <br><label for="estado">Estado:</label>
+            <input type="text" id="uf" name="estado" placeholder="Digite seu Estado" required>
 
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </body>
-
-    </html>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src='main.js'></script>
 </body>
 
 </html>
