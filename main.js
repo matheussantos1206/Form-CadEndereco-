@@ -1,10 +1,10 @@
 'use strict';  //Ativa o modo restrito //Este modo faz com que o javascripti opere de formas mais segura e rigorosa, ajudando a evitar erros comuns  de programação 
-/* consumo de API - https://viacep.com.br/ */ 
+/* consumo de API - https://viacep.com.br/ */
 
 //função para limpar campos preenchidos
 
 const limparFormulario = () => {
-    document.getElementById('logradoro').valeu = '';
+    document.getElementById('logradouro').value = '';
     document.getElementById('localidade').valeu = '';
     document.getElementById('bairro').valeu = '';
     document.getElementById('uf').valeu = '';
@@ -15,13 +15,36 @@ const limparFormulario = () => {
 
 //Verifica se o cep é válido 
 const eNumero = (numero) => /^[0-9]+$/.test(numero);// testa a espreção no argumento
-const cepValido =(cep) => cep.length == 8 && eNumero(cep)// indentifica o tanto de numero indentificado no cep 
+const cepValido = (cep) => cep.length == 8 && eNumero(cep)// indentifica o tanto de numero indentificado no cep 
 
 //função preenchrer formulário
 
-const preencherformulario = (endereco) =>{ // Função que preenche os campos abaixo de acordo com os dados da API
-    document.getElementById('logradoro').value = endereco.logradoro;
+const preencherformulario = (endereco) => { // Função que preenche os campos abaixo de acordo com os dados da API
+    document.getElementById('logradouro').value = endereco.logradouro;
     document.getElementById('localidade').value = endereco.localidade;
     document.getElementById('bairro').value = endereco.bairro;
     document.getElementById('uf').value = endereco.uf;
 }
+
+// Função para consumo de API ViaCEP
+const pesquisarCep = async () => {
+    limparFormulario();
+    const url = `http://viacep.com.br/ws/${cep.value}/json/`;
+
+    if (cepValido(cep.value)) {
+        const dados = await fetch(url);
+        const addres = await dados.json();
+
+        if (addres.hasOwnProperty('erro')) {
+            alert('CEP não encontrado');
+        } else {
+            preencherformulario(addres);
+        }
+
+    } else {
+        alert('CEP Incorreto');
+    }
+}
+
+// Chama escutador  para disparar ação de preenchimento 
+document.getElementById('cep').addEventListener('focusout', pesquisarCep);
