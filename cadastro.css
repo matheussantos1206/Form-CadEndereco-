@@ -1,77 +1,118 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
  
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
  
-.container {
-    display: flex;
-    background-color: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
+#cep{
+    width: 100%;
+    max-width: 100px;
 }
  
-/* h1 {
+#logradouro{
+    width: 300px;
+}
+#bairro{
+    width: 300px;
+}
+#numero{
+    width: 70px;
+}
+ 
+#complemento{
+    width: 300px;
+}
+#localidade{
+    width: 300px;
+}
+#uf{
+    width: 70px;
+}
+main {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+ 
+h1 {
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 20px;
-} */
+    color: #333;
+}
  
+form {
+    display: flex;
+    flex-direction: column;
+}
  
 label {
     margin-bottom: 5px;
-    font-weight: bold;
+    color: #555;
 }
  
 input {
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 16px;
+}
+ 
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+ 
+/* Estilização para exibir os campos em linha */
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.flex-row input {
+    width: 32%;
+}
+ 
+#btn{
+    text-align: center;
 }
  
 button {
     padding: 10px;
-    background-color: #28a745;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    left: 650px;
-    top: 408px;
+    width: 100px;
 }
  
 button:hover {
-    background-color: #218838;
+    background-color: #0056b3;
 }
-
-.form-input{
-    max-width: 30%;
+ 
+@media (max-width: 500px) {
+    .flex-row {
+        flex-direction: column;
+    }
+ 
+    .flex-row input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
-
-.secao-input-2{
-    width: 100%;
-    border: solid 1px black;
-}
-.linha{
-    /* display: inline; */
-    max-width: 200%;
-    border: solid 1px black;
-}
-.input{
-    width: 400px;
-    border: solid 1px black;
-}
+ 
