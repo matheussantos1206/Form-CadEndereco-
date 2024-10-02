@@ -30,7 +30,8 @@ const pesquisarCep = async() => {
         const dados = await fetch(url); //await = esperar
         const addres = await dados.json(); // fetch = promessa
        
-        // hasOwnProperty  retorna um booleano indicando se o objeto possui a propriedade especificada como uma propriedade definida no próprio objeto em questão
+        // hasOwnProperty  retorna um booleano indicando se o objeto possui a propriedade 
+        //especificada como uma propriedade definida no próprio objeto em questão.
         if(addres.hasOwnProperty('erro')){
             // document.getElementById('rua').value = 'CEP não encontrado!';
             alert('CEP não encontrado!');
